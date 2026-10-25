@@ -1,0 +1,9 @@
+services:
+  lab:
+    build: .
+    working_dir: /app
+    volumes:
+      - ./results:/app/results
+      - ./paper:/app/paper
+      - ./evidence/manifests:/app/evidence/manifests
+    command: make all

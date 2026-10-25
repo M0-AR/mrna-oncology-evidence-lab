@@ -1,0 +1,18 @@
+metric,value,unit,definition
+absolute_rfs_gain_2y_pct,12.200000000000003,percentage_points,2-year RFS difference
+absolute_dmfs_gain_2y_pct,8.299999999999997,percentage_points,2-year DMFS difference
+nnt_2y_rfs,8.196721311475407,patients,Number needed to treat for one additional recurrence-free patient
+nnt_2y_dmfs,12.048192771084342,patients,Number needed to treat for one additional distant-metastasis-free patient
+delayed_effect_ratio,0.42424242424242425,ratio,Post-six-month HR divided by first-six-month HR
+delayed_relative_reduction_pct,57.57575757575757,percent,Relative reduction after six months versus first six months
+phase2_to_phase3_rfs_attenuation_pp,7.0,percentage_points,Phase 2 minus Phase 3 RFS reduction
+phase2_to_phase3_dmfs_attenuation_pp,21.0,percentage_points,Phase 2 minus Phase 3 DMFS reduction
+phase2_to_phase3_rfs_attenuation_relative_pct,14.285714285714285,percent,Relative attenuation in RFS effect
+phase2_to_phase3_dmfs_attenuation_relative_pct,35.59322033898305,percent,Relative attenuation in DMFS effect
+phase3_phase2_hr_ratio_rfs,1.1372549019607843,ratio,Phase 3 HR divided by Phase 2 HR
+phase3_phase2_hr_ratio_dmfs,1.5121951219512195,ratio,Phase 3 HR divided by Phase 2 HR
+mitt_vs_itt_hr_ratio_rfs,0.8793103448275863,ratio,mITT HR divided by ITT HR
+trae_any_excess_pp,5.799999999999997,percentage_points,Any TRAE combination minus control
+nnh_any_trae,17.241379310344836,patients,Number needed to harm for one additional any-grade TRAE
+trae_grade3_5_excess_pp,0.7999999999999989,percentage_points,Grade 3-5 TRAE combination minus control
+nnh_grade3_5_trae,125.00000000000017,patients,Number needed to harm for one additional Grade 3-5 TRAE

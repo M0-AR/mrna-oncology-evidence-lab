@@ -1,0 +1,17 @@
+metric,value,unit,definition
+pandemic_revenue_2021_2022,37734.0,USD_millions,2021 plus 2022 total revenue
+pandemic_product_sales_2021_2022,36110.0,USD_millions,2021 plus 2022 product sales
+revenue_change_2023_2024_pct,-52.74532710280374,percent,2024 total revenue growth
+product_change_2023_2024_pct,-53.39529305951132,percent,2024 product sales growth
+revenue_change_2024_2025_pct,-39.92583436341162,percent,2025 total revenue growth
+product_change_2024_2025_pct,-41.524605982631066,percent,2025 product sales growth
+net_margin_2022_pct,43.40964543425219,percent,2022 net income over revenue
+net_margin_2023_pct,-68.83761682242991,percent,2023 net income over revenue
+net_margin_2024_pct,-110.04326328800988,percent,2024 net income over revenue
+net_margin_2025_pct,-145.16460905349794,percent,2025 net income over revenue
+rnd_intensity_2023_pct,70.75058411214953,percent,2023 R&D over revenue
+rnd_intensity_2024_pct,140.389369592089,percent,2024 R&D over revenue
+rnd_intensity_2025_pct,161.11111111111111,percent,2025 R&D over revenue
+keytruda_share_merck_2022_pct,35.3170386114063,percent,Keytruda sales over Merck total sales
+keytruda_sales_2022,20937.0,USD_millions,2022 Keytruda sales
+merck_total_sales_2022,59283.0,USD_millions,2022 Merck total sales

@@ -1,0 +1,197 @@
+version: 1
+trial: INTerpath-001
+registry: NCT05933577
+median_followup_months: 24.6
+enrollment:
+  randomized: 1137
+  combination_n: 757
+  control_n: 380
+  safety_combination_n: 755
+  safety_control_n: 380
+  ratio: "2:1"
+  source: merck_phase3_details
+endpoints:
+  - id: rfs_itt_hr
+    population: ITT
+    endpoint: RFS
+    metric: hazard_ratio
+    value: 0.58
+    ci_low: 0.45
+    ci_high: 0.75
+    p_value_text: "<0.001"
+    risk_reduction_pct: 42
+    source: merck_phase3_details
+    quote: "HR=0.58 [95% CI, 0.45-0.75]; two-sided p<0.001"
+  - id: dmfs_itt_hr
+    population: ITT
+    endpoint: DMFS
+    metric: hazard_ratio
+    value: 0.62
+    ci_low: 0.45
+    ci_high: 0.85
+    p_value_text: "0.002"
+    risk_reduction_pct: 38
+    source: merck_phase3_details
+    quote: "HR=0.62 [95% CI, 0.45-0.85]; two-sided p=0.002"
+  - id: rfs_first_6m_hr
+    population: ITT
+    endpoint: RFS
+    metric: hazard_ratio
+    period: "first 6 months"
+    value: 0.99
+    ci_low: 0.66
+    ci_high: 1.49
+    source: merck_phase3_details
+    quote: "HR=0.99 [95% CI, 0.66-1.49]"
+  - id: dmfs_first_6m_hr
+    population: ITT
+    endpoint: DMFS
+    metric: hazard_ratio
+    period: "first 6 months"
+    value: 1.01
+    ci_low: 0.58
+    ci_high: 1.79
+    source: merck_phase3_details
+    quote: "HR=1.01 [95% CI, 0.58-1.79]"
+  - id: rfs_after_6m_hr
+    population: ITT
+    endpoint: RFS
+    metric: piecewise_hazard_ratio
+    period: "after 6 months"
+    value: 0.42
+    ci_low: 0.30
+    ci_high: 0.58
+    risk_reduction_pct: 58
+    source: merck_phase3_details
+    quote: "piecewise HR=0.42 [95% CI, 0.30-0.58]"
+  - id: dmfs_after_6m_hr
+    population: ITT
+    endpoint: DMFS
+    metric: piecewise_hazard_ratio
+    period: "after 6 months"
+    value: 0.50
+    ci_low: 0.34
+    ci_high: 0.73
+    risk_reduction_pct: 50
+    source: merck_phase3_details
+    quote: "HR=0.50 [95% CI, 0.34-0.73]"
+  - id: rfs_mitt_hr
+    population: mITT
+    endpoint: RFS
+    metric: hazard_ratio
+    value: 0.51
+    ci_low: 0.39
+    ci_high: 0.67
+    risk_reduction_pct: 49
+    source: merck_phase3_details
+    quote: "HR=0.51 [95% CI, 0.39-0.67]"
+  - id: dmfs_mitt_hr
+    population: mITT
+    endpoint: DMFS
+    metric: hazard_ratio
+    value: 0.55
+    ci_low: 0.40
+    ci_high: 0.77
+    risk_reduction_pct: 45
+    source: merck_phase3_details
+    quote: "HR=0.55 [95% CI, 0.40-0.77]"
+  - id: os_itt_hr
+    population: ITT
+    endpoint: OS
+    metric: hazard_ratio
+    value: 0.77
+    ci_low: 0.45
+    ci_high: 1.31
+    p_value: 0.33
+    status: immature
+    source: onclive_os
+    quote: "HR, 0.77; 95% CI, 0.45-1.31; P = .33"
+  - id: rfs_2y_combination
+    population: ITT
+    endpoint: RFS
+    metric: rate_pct
+    timepoint: "2 years"
+    arm: combination
+    value: 82.2
+    ci_low: 79.3
+    ci_high: 84.8
+    source: merck_phase3_details
+  - id: rfs_2y_control
+    population: ITT
+    endpoint: RFS
+    metric: rate_pct
+    timepoint: "2 years"
+    arm: control
+    value: 70.0
+    ci_low: 65.0
+    ci_high: 74.5
+    source: merck_phase3_details
+  - id: dmfs_2y_combination
+    population: ITT
+    endpoint: DMFS
+    metric: rate_pct
+    timepoint: "2 years"
+    arm: combination
+    value: 88.5
+    ci_low: 86.0
+    ci_high: 90.6
+    source: merck_phase3_details
+  - id: dmfs_2y_control
+    population: ITT
+    endpoint: DMFS
+    metric: rate_pct
+    timepoint: "2 years"
+    arm: control
+    value: 80.2
+    ci_low: 75.6
+    ci_high: 84.0
+    source: merck_phase3_details
+safety:
+  - id: trae_any_combination
+    metric: rate_pct
+    arm: combination
+    value: 95.8
+    numerator: 723
+    denominator: 755
+    source: merck_phase3_details
+  - id: trae_any_control
+    metric: rate_pct
+    arm: control
+    value: 90.0
+    numerator: 342
+    denominator: 380
+    source: merck_phase3_details
+  - id: trae_grade3_5_combination
+    metric: rate_pct
+    arm: combination
+    value: 14.2
+    numerator: 107
+    source: merck_phase3_details
+  - id: trae_grade3_5_control
+    metric: rate_pct
+    arm: control
+    value: 13.4
+    numerator: 51
+    source: merck_phase3_details
+phase2_5y:
+  source: asco_9500
+  population: "157 patients, 107 combination, 50 control"
+  median_followup_months: 60.3
+  rfs:
+    hr: 0.51
+    ci_low: 0.29
+    ci_high: 0.89
+    risk_reduction_pct: 49
+    combination_5y_pct: 68.8
+    control_5y_pct: 49.1
+  dmfs:
+    hr: 0.41
+    ci_low: 0.20
+    ci_high: 0.84
+    risk_reduction_pct: 59
+  os:
+    hr: 0.47
+    ci_low: 0.17
+    ci_high: 1.35
+    combination_5y_pct: 92.2
+    control_5y_pct: 71.3

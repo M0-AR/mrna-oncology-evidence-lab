@@ -1,0 +1,43 @@
+{
+  "generated_at": "2026-10-25T09:39:39.320375+00:00",
+  "algorithm": "sha256",
+  "count": 6,
+  "files": [
+    {
+      "path": "data/raw/prices/MRNA_yahoo_chart.json",
+      "bytes": 212194,
+      "sha256": "f04366ad01f3397db8e6b9f2205b40cc5125547dda32219bbfced36dab230852",
+      "retrieved_at": "2026-10-24"
+    },
+    {
+      "path": "data/raw/prices/nasdaq_IBB.json",
+      "bytes": 48953,
+      "sha256": "91b0274573d7d4e17c9cfdd6ef297edb4cec19d68ce7f4482ee4b6b2f7eae702",
+      "retrieved_at": "2026-10-24"
+    },
+    {
+      "path": "data/raw/prices/nasdaq_MRK.json",
+      "bytes": 50358,
+      "sha256": "aea6c111247c5bfe2d7fc502833d81c3fce45a0d5402c4852aaf6024310cad01",
+      "retrieved_at": "2026-10-24"
+    },
+    {
+      "path": "data/raw/prices/nasdaq_MRNA.json",
+      "bytes": 49568,
+      "sha256": "307302ca4a25d59c7a8f7698c2a1f4e8e3a27d752f63fd8758bdbf3507977505",
+      "retrieved_at": "2026-10-24"
+    },
+    {
+      "path": "data/raw/prices/nasdaq_SPY.json",
+      "bytes": 49513,
+      "sha256": "07eb8271f7faa674b7ec6b19ee061e2c7ce1f0470f06280f8688c06cd345f30a",
+      "retrieved_at": "2026-10-24"
+    },
+    {
+      "path": "data/raw/prices/nasdaq_XBI.json",
+      "bytes": 48455,
+      "sha256": "7dbbb7395c65e9048e97073831bd4632c0610b597428760074087f4816dedc27",
+      "retrieved_at": "2026-10-24"
+    }
+  ]
+}

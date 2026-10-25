@@ -1,0 +1,48 @@
+# NOTICE
+
+This repository contains two categories of material with different rights.
+
+## 1. Original work
+
+The source code, original analysis, original prose, and original figures are
+licensed under the MIT License. See `LICENSE`.
+
+Copyright (c) 2026 Delayed Divergence contributors.
+
+## 2. Third-party source snapshots
+
+Files under `evidence/snapshots/` are copies of publicly available third-party
+material collected for verification and reproducibility. Copyright and other
+rights remain with the original publishers. They are **not** relicensed under
+the MIT License.
+
+The snapshots are provided for research, verification, and reproducibility.
+They may be subject to publisher terms, database rights, or fair-use limits.
+Do not redistribute them as stand-alone content, behind a paywall, or as a
+substitute for the original source.
+
+Where a source could not be snapshotted, the repository flags the limitation
+rather than pretending the evidence is self-contained. The Bloomberg source is
+paywalled and is retained only as a flagged secondary record.
+
+Vendor-embedded analytics and map credentials found in page boilerplate are
+redacted before publication. Redaction does not alter article text, tables, or
+results; the manifest hashes cover the published, redacted files.
+
+## 3. No endorsement
+
+Inclusion of a source does not imply that the publisher endorses this
+repository, its verdicts, or its conclusions.
+
+## 4. Research and education only
+
+This repository is not medical advice, diagnosis, treatment guidance, or
+investment advice. It is not a substitute for independent clinical,
+regulatory, legal, or financial review. See the limitations section of the
+README.
+
+## 5. Takedown and correction
+
+If you are a rights holder and believe a snapshot exceeds permissible use,
+open an issue or contact the maintainers. The material will be reviewed and,
+where appropriate, removed or replaced with a citation-only record.

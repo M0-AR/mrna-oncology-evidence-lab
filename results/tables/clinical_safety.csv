@@ -1,0 +1,5 @@
+id,metric,arm,value,numerator,denominator,source,kind
+trae_any_combination,rate_pct,combination,95.8,723,755.0,merck_phase3_details,safety
+trae_any_control,rate_pct,control,90.0,342,380.0,merck_phase3_details,safety
+trae_grade3_5_combination,rate_pct,combination,14.2,107,,merck_phase3_details,safety
+trae_grade3_5_control,rate_pct,control,13.4,51,,merck_phase3_details,safety

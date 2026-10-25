@@ -1,0 +1,53 @@
+version: 1
+units: USD_millions
+annual:
+  - year: 2021
+    total_revenue: 18471
+    product_sales: 17675
+    net_income: 12202
+    rnd: 1991
+    source: sec_2022_product_sales
+  - year: 2022
+    total_revenue: 19263
+    product_sales: 18435
+    net_income: 8362
+    rnd: 3295
+    source: sec_2022_product_sales
+  - year: 2023
+    total_revenue: 6848
+    product_sales: 6671
+    net_income: -4714
+    rnd: 4845
+    source: sec_10k_2025
+  - year: 2024
+    total_revenue: 3236
+    product_sales: 3109
+    net_income: -3561
+    rnd: 4543
+    source: sec_10k_2025
+  - year: 2025
+    total_revenue: 1944
+    product_sales: 1818
+    net_income: -2822
+    rnd: 3132
+    source: sec_10k_2025
+quarterly_2026_q2:
+  total_revenue: 145
+  net_loss: -782
+  eps: -1.97
+  rnd: 651
+  source: sec_q2_2026
+headcount:
+  year: 2025
+  full_time_employees_approx: 4700
+  source: sec_10k_2025
+keytruda:
+  year: 2022
+  sales: 20937
+  merck_total_sales: 59283
+  source: merck_2022_q4
+merck_option:
+  upfront_2016: 200
+  option_exercise_2022: 250
+  cost_profit_split: "50/50"
+  source: [merck_2016, merck_2022_option]

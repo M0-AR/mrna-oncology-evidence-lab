@@ -1,0 +1,44 @@
+version: 1
+ticker: MRNA
+shares_outstanding: 399235889
+shares_as_of: '2026-07-24'
+shares_source: sec_facts
+estimation:
+  start: '2025-08-01'
+  end: '2026-07-31'
+  model: OLS log returns
+  benchmarks:
+  - SPY
+  - XBI
+  - IBB
+event_windows:
+- - 0
+  - 0
+- - -1
+  - 1
+- - 0
+  - 1
+- - 0
+  - 5
+- - 0
+  - 20
+placebo:
+  draws: 10000
+  seed: 20261024
+  guard_days: 10
+volume_lookback_days: 60
+events:
+- id: event_1
+  date: '2026-08-19'
+  prior_date: '2026-08-18'
+  label: Phase 3 topline
+  timing: before_market
+  source: merck_topline
+  expected_direction: positive
+- id: event_2
+  date: '2026-10-22'
+  prior_date: '2026-10-21'
+  label: Detailed data and leak
+  timing: during_market
+  source: merck_phase3_details
+  expected_direction: negative

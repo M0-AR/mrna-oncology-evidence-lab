@@ -1,0 +1,273 @@
+version: 1
+retrieved_at: '2026-10-24'
+sources:
+- id: merck_phase3_details
+  title: Merck and Moderna Will Present Results From Landmark Phase 3 INTerpath-001
+    Trial at ESMO 2026
+  publisher: Merck & Co.
+  published_at: '2026-10-22'
+  type: company_press_release
+  tier: 1
+  url: https://www.merck.com/news/merck-and-moderna-will-present-results-from-landmark-phase-3-interpath-001-trial-for-intismeran-autogene-plus-keytruda-pembrolizumab-at-esmo-2026-presidential-symposium/
+  snapshot: evidence/snapshots/merck_2026-10-22_phase3_details.html
+  notes: Primary detailed efficacy, safety, enrollment, and publication-status release.
+- id: merck_topline
+  title: Merck and Moderna Announce Phase 3 INTerpath-001 Trial Met RFS and DMFS Endpoints
+  publisher: Merck & Co.
+  published_at: '2026-08-19'
+  type: company_press_release
+  tier: 1
+  url: https://www.merck.com/news/merck-and-moderna-announce-phase-3-interpath-001-trial-of-intismeran-autogene-plus-keytruda-met-endpoints-of-recurrence-free-survival-rfs-and-distant-metastasis-free-survival-dmfs-in-patients-with-completely-resected-stage-iib-iv-melanoma/
+  snapshot: evidence/snapshots/merck_2026-08-19_topline.html
+  notes: Event 1 topline release.
+- id: moderna_topline
+  title: Merck and Moderna Announce Phase 3 INTerpath-001 Trial Met RFS and DMFS Endpoints
+  publisher: Moderna, Inc.
+  published_at: '2026-08-19'
+  type: company_press_release
+  tier: 1
+  url: https://news.modernatx.com/merck-and-moderna-announce-phase-3-interpath-001-trial-of-intismeran-plus-keytruda-met-endpoints-of-rfs-and-dmfs-in-melanoma
+  snapshot: evidence/snapshots/moderna_2026-08-19_topline.html
+  notes: Company mirror of Event 1 topline release.
+- id: cnbc_leak
+  title: Moderna shares plunge after cancer vaccine data leaks, despite positive results
+  publisher: CNBC
+  published_at: '2026-10-22'
+  type: news
+  tier: 3
+  url: https://www.cnbc.com/2026/10/22/moderna-stock-cancer-vaccine-data-leak.html
+  snapshot: evidence/snapshots/cnbc_2026-10-22_data_leak.html
+  notes: Documents intraday drop, partial leak, positive full data, and analyst interpretation.
+- id: smc_reaction
+  title: Expert reaction to abstract of Phase 3 INTerpath-001 trial results
+  publisher: Science Media Centre
+  published_at: '2026-10-23'
+  type: expert_commentary
+  tier: 3
+  url: https://www.sciencemediacentre.org/expert-reaction-to-abstract-of-phase-3-interpath-001-trial-results-of-an-individualised-mrna-vaccine-for-resected-stage-iib-iv-melanoma-due-to-be-presented-at-esmo/
+  snapshot: evidence/snapshots/smc_2026-10-23_expert_reaction.html
+  notes: Independent clinical commentary; absolute benefit and NNT framing.
+- id: onclive_os
+  title: Adjuvant Intismeran Autogene Plus Pembrolizumab Improves RFS and DMFS in
+    Melanoma
+  publisher: OncLive
+  published_at: '2026-10-22'
+  type: trade_news
+  tier: 3
+  url: https://www.onclive.com/view/adjuvant-intismeran-autogene-plus-pembrolizumab-improves-rfs-and-dmfs-in-melanoma
+  snapshot: evidence/snapshots/onclive_2026-10-22_os.md
+  notes: Reports OS HR 0.77 (0.45-1.31), p=.33.
+- id: merck_2016
+  title: Merck and Moderna Announce Strategic Collaboration on mRNA-Based Personalized
+    Cancer Vaccines
+  publisher: Merck & Co.
+  published_at: '2016-06-29'
+  type: company_press_release
+  tier: 1
+  url: https://www.merck.com/news/merck-and-moderna-announce-strategic-collaboration-to-advance-novel-mrna-based-personalized-cancer-vaccines-with-keytruda-pembrolizumab-for-the-treatment-of-multiple-types-of-cancer/
+  snapshot: evidence/snapshots/merck_2016-06-29_collaboration.html
+  notes: Documents $200 million upfront payment and collaboration structure.
+- id: merck_2022_option
+  title: Merck and Moderna Announce Exercise of Option for Joint Development and Commercialization
+  publisher: Merck & Co.
+  published_at: '2022-10-12'
+  type: company_press_release
+  tier: 1
+  url: https://www.merck.com/news/merck-and-moderna-announce-exercise-of-option-by-merck-for-joint-development-and-commercialization-of-investigational-personalized-cancer-vaccine/
+  snapshot: evidence/snapshots/merck_2022-10-12_option.html
+  notes: Documents $250 million option exercise and 50/50 cost-and-profit sharing.
+- id: hhs_2025
+  title: HHS Winds Down mRNA Vaccine Development Under BARDA
+  publisher: U.S. Department of Health and Human Services
+  published_at: '2025-08-05'
+  type: government_press_release
+  tier: 1
+  url: https://www.hhs.gov/press-room/hhs-winds-down-mrna-development-under-barda.html
+  snapshot: evidence/snapshots/hhs_2025-08-05_mrna_winddown.md
+  notes: States 22 projects worth nearly $500 million; Moderna/UTMB collaboration
+    restructuring.
+- id: fda_mflusiva
+  title: MFLUSIVA product page
+  publisher: U.S. Food and Drug Administration
+  published_at: '2026-09-02'
+  type: regulatory_page
+  tier: 1
+  url: https://www.fda.gov/vaccines-blood-biologics/vaccines/mflusiva
+  snapshot: evidence/snapshots/fda_mflusiva.html
+  notes: Approval date August 5, 2026; indication and regulatory documents.
+- id: fda_review
+  title: Clinical Review - MFLUSIVA
+  publisher: U.S. Food and Drug Administration
+  published_at: '2026-08-05'
+  type: regulatory_review
+  tier: 1
+  url: https://www.fda.gov/media/194140/download
+  snapshot: evidence/snapshots/fda_mflusiva_clinical_review.pdf
+  notes: 40,805 randomized; 26.6% relative vaccine efficacy; access via Internet Archive.
+- id: nih_63days
+  title: That Record-breaking Sprint to Create a COVID-19 Vaccine
+  publisher: NIH Intramural Research Program
+  published_at: '2021-05-01'
+  type: government_history
+  tier: 2
+  url: https://irp.nih.gov/catalyst/29/5/that-record-breaking-sprint-to-create-a-covid-19-vaccine
+  snapshot: evidence/snapshots/nih_2020-03-16_63days.html
+  notes: NIH says 65 days from sequence release; company says 63 days from sequence
+    selection.
+- id: sec_10k_2025
+  title: Moderna, Inc. Form 10-K for fiscal year 2025
+  publisher: U.S. Securities and Exchange Commission
+  published_at: '2026-02-20'
+  type: sec_filing
+  tier: 1
+  url: https://www.sec.gov/Archives/edgar/data/1682852/000168285226000033/mrna-20251231.htm
+  snapshot: evidence/snapshots/sec_mrna_2025_10-K.htm
+  notes: Revenue, net loss, R&D, product sales, employees, and risk factors.
+- id: sec_facts
+  title: Moderna, Inc. SEC company facts
+  publisher: U.S. Securities and Exchange Commission
+  published_at: '2026-07-31'
+  type: sec_xbrl
+  tier: 1
+  url: https://data.sec.gov/api/xbrl/companyfacts/CIK0001682852.json
+  snapshot: evidence/snapshots/sec_mrna_companyfacts.json
+  notes: Machine-readable XBRL facts used for financial cross-checks.
+- id: sec_2022_product_sales
+  title: Moderna 2022 Form 10-K product sales by geography
+  publisher: U.S. Securities and Exchange Commission
+  published_at: '2023-02-24'
+  type: sec_filing
+  tier: 1
+  url: https://www.sec.gov/Archives/edgar/data/1682852/000168285223000011/R12.htm
+  snapshot: evidence/snapshots/sec_mrna_2022_10K_product_sales.html
+  notes: Product sales $17.675B in 2021 and $18.435B in 2022.
+- id: sec_q2_2026
+  title: Moderna second quarter 2026 results
+  publisher: U.S. Securities and Exchange Commission
+  published_at: '2026-07-31'
+  type: sec_exhibit
+  tier: 1
+  url: https://www.sec.gov/Archives/edgar/data/1682852/000168285226000147/exhibit9912026q2pressrelea.htm
+  snapshot: evidence/snapshots/sec_mrna_2026_q2_release.html
+  notes: Q2 2026 revenue $145M, net loss $782M, EPS $(1.97), R&D $651M.
+- id: nct05933577
+  title: INTerpath-001 registry record
+  publisher: ClinicalTrials.gov
+  published_at: '2025-09-24'
+  type: clinical_registry
+  tier: 1
+  url: https://clinicaltrials.gov/api/v2/studies/NCT05933577
+  snapshot: evidence/snapshots/clinicaltrials_nct05933577.json
+  notes: Phase 3, triple-masked, estimated enrollment 1,089, actual start 2023-07-19,
+    primary completion 2029-10-26.
+- id: asco_9500
+  title: 5-year update of KEYNOTE-942
+  publisher: Journal of Clinical Oncology / ASCO
+  published_at: '2026-06-01'
+  type: conference_abstract
+  tier: 2
+  url: https://doi.org/10.1200/JCO.2026.44.16_suppl.9500
+  snapshot: evidence/snapshots/crossref_asco_2026_9500.json
+  notes: Phase 2 5-year RFS HR 0.51, DMFS HR 0.41, OS HR 0.47.
+- id: merck_2022_q4
+  title: Merck fourth-quarter and full-year 2022 results
+  publisher: Merck & Co.
+  published_at: '2023-02-02'
+  type: company_press_release
+  tier: 1
+  url: https://www.sec.gov/Archives/edgar/data/310158/000110465923009552/tm235007d1_ex99-1.htm
+  snapshot: evidence/snapshots/merck_2023-02-02_2022_q4_results.html
+  notes: 2022 Keytruda sales $20.937B; total sales $59.283B.
+- id: fed_placebo
+  title: Placebo tests for single-unit event studies
+  publisher: Board of Governors of the Federal Reserve System
+  published_at: '2026'
+  type: working_paper
+  tier: 2
+  url: https://www.federalreserve.gov/econres/feds/files/2026045pap.pdf
+  snapshot: evidence/snapshots/fed_2026_placebo_event_study.pdf
+  notes: 134,000+ placebo event studies; no single estimator dominates.
+- id: mrna_yahoo
+  title: MRNA daily price history
+  publisher: Yahoo Finance
+  published_at: '2026-10-23'
+  type: market_data
+  tier: 2
+  url: https://query1.finance.yahoo.com/v8/finance/chart/MRNA?period1=1544140800&period2=1793001600&interval=1d&events=history
+  snapshot: data/raw/prices/MRNA_yahoo_chart.json
+  notes: Adjusted and unadjusted daily OHLCV; used for long-run and event prices.
+- id: nasdaq_mrna
+  title: MRNA Nasdaq historical prices
+  publisher: Nasdaq
+  published_at: '2026-10-24'
+  type: market_data
+  tier: 2
+  url: https://api.nasdaq.com/api/quote/MRNA/historical?assetclass=stocks&fromdate=2025-01-01&todate=2026-10-24&limit=1000
+  snapshot: data/raw/prices/nasdaq_MRNA.json
+  notes: Independent cross-check for close and volume.
+- id: nasdaq_mrk
+  title: MRK Nasdaq historical prices
+  publisher: Nasdaq
+  published_at: '2026-10-24'
+  type: market_data
+  tier: 2
+  url: https://api.nasdaq.com/api/quote/MRK/historical?assetclass=stocks&fromdate=2025-01-01&todate=2026-10-24&limit=1000
+  snapshot: data/raw/prices/nasdaq_MRK.json
+  notes: Pharmaceutical comparator.
+- id: nasdaq_spy
+  title: SPY Nasdaq historical prices
+  publisher: Nasdaq
+  published_at: '2026-10-24'
+  type: market_data
+  tier: 2
+  url: https://api.nasdaq.com/api/quote/SPY/historical?assetclass=etf&fromdate=2025-01-01&todate=2026-10-24&limit=1000
+  snapshot: data/raw/prices/nasdaq_SPY.json
+  notes: Market benchmark.
+- id: nasdaq_xbi
+  title: XBI Nasdaq historical prices
+  publisher: Nasdaq
+  published_at: '2026-10-24'
+  type: market_data
+  tier: 2
+  url: https://api.nasdaq.com/api/quote/XBI/historical?assetclass=etf&fromdate=2025-01-01&todate=2026-10-24&limit=1000
+  snapshot: data/raw/prices/nasdaq_XBI.json
+  notes: Biotechnology sector benchmark.
+- id: nasdaq_ibb
+  title: IBB Nasdaq historical prices
+  publisher: Nasdaq
+  published_at: '2026-10-24'
+  type: market_data
+  tier: 2
+  url: https://api.nasdaq.com/api/quote/IBB/historical?assetclass=etf&fromdate=2025-01-01&todate=2026-10-24&limit=1000
+  snapshot: data/raw/prices/nasdaq_IBB.json
+  notes: Biotechnology sector benchmark.
+- id: merck_10k_2025
+  title: Merck & Co., Inc. Form 10-K for fiscal year 2025
+  publisher: Merck & Co.
+  published_at: '2026-02-24'
+  type: sec_filing
+  tier: 1
+  url: https://www.merck.com/wp-content/uploads/sites/124/2026/02/MRK-12.31.2025-10K-FINAL.pdf
+  snapshot: evidence/snapshots/merck_2025_10-K.pdf
+  notes: Keytruda compound patent December 2028; additional patents May and November
+    2029.
+- id: moderna_2020_63days
+  title: Moderna’s Work on a Potential Vaccine Against COVID-19
+  publisher: Moderna, Inc. / SEC
+  published_at: '2020-03-16'
+  type: sec_exhibit
+  tier: 1
+  url: https://www.sec.gov/Archives/edgar/data/1682852/000119312520074867/d884510dex991.htm
+  snapshot: evidence/snapshots/sec_moderna_2020-03-16_63days.html
+  notes: 63 days from sequence selection to first human dosing; 65 days from public
+    sequence release.
+- id: bloomberg_short
+  title: Moderna’s 160% Surge Burns Shorts in Painful $5 Billion Loss
+  publisher: Bloomberg
+  published_at: '2026-08-19'
+  type: news
+  tier: 3
+  url: https://www.bloomberg.com/news/articles/2026-08-19/moderna-s-160-surge-burns-shorts-in-painful-5-billion-loss
+  snapshot: null
+  notes: Paywalled; metadata and body figure ($5.5B) reported by search excerpt. Title
+    says 160%, body says 177%.

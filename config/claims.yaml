@@ -1,0 +1,445 @@
+version: 1
+allowed_verdicts:
+- supported
+- partially_supported
+- unsupported
+- not_verifiable
+claims:
+- id: C01
+  category: clinical
+  transcript_claim: The Merck-Moderna Phase 3 melanoma trial succeeded on its primary
+    endpoints.
+  verdict: supported
+  confidence: high
+  sources:
+  - merck_phase3_details
+  - merck_topline
+  evidence: RFS HR 0.58 (0.45-0.75), p<0.001; DMFS HR 0.62 (0.45-0.85), p=0.002.
+  notes: The trial met both RFS and DMFS; OS remains immature.
+- id: C02
+  category: clinical
+  transcript_claim: The vaccine reduced recurrence or death by 42%.
+  verdict: supported
+  confidence: high
+  sources:
+  - merck_phase3_details
+  evidence: HR 0.58 corresponds to a 42% relative reduction in the hazard of recurrence
+    or death.
+  notes: Relative, not absolute, risk reduction.
+- id: C03
+  category: clinical
+  transcript_claim: At two years, 82% of vaccinated patients were recurrence-free
+    versus 70% of controls.
+  verdict: supported
+  confidence: high
+  sources:
+  - merck_phase3_details
+  - smc_reaction
+  evidence: 2-year RFS 82.2% (79.3-84.8) vs 70.0% (65.0-74.5).
+  notes: Absolute difference is 12.2 percentage points; NNT approximately 8.2.
+- id: C04
+  category: clinical
+  transcript_claim: The benefit appears only after the six-month immunization period.
+  verdict: supported
+  confidence: high
+  sources:
+  - merck_phase3_details
+  evidence: First 6 months RFS HR 0.99 (0.66-1.49); after 6 months piecewise RFS HR
+    0.42 (0.30-0.58).
+  notes: Pre-specified sensitivity analysis; first-six-month DMFS HR 1.01 (0.58-1.79).
+- id: C05
+  category: clinical
+  transcript_claim: The trial proved that the vaccine extends overall survival.
+  verdict: unsupported
+  confidence: high
+  sources:
+  - onclive_os
+  - merck_phase3_details
+  evidence: OS HR 0.77 (0.45-1.31), p=.33; OS data immature.
+  notes: A favorable trend is not statistically significant evidence of survival benefit.
+- id: C06
+  category: clinical
+  transcript_claim: The Phase 3 effect is similar to the Phase 2 result.
+  verdict: partially_supported
+  confidence: high
+  sources:
+  - asco_9500
+  - merck_phase3_details
+  evidence: Phase 2 5-year RFS reduction 49% (HR 0.51); Phase 3 42% (HR 0.58).
+  notes: Directionally consistent but attenuated by 7 percentage points.
+- id: C07
+  category: clinical
+  transcript_claim: The distant-metastasis benefit replicated at full strength.
+  verdict: partially_supported
+  confidence: high
+  sources:
+  - asco_9500
+  - merck_phase3_details
+  evidence: Phase 2 DMFS reduction 59% (HR 0.41); Phase 3 38% (HR 0.62).
+  notes: Attenuation is larger for DMFS than for RFS, consistent with winner's curse.
+- id: C08
+  category: clinical
+  transcript_claim: The trial enrolled about 1,100 patients.
+  verdict: supported
+  confidence: high
+  sources:
+  - merck_phase3_details
+  - nct05933577
+  evidence: 1,137 randomized 2:1 (757 combination, 380 control).
+  notes: Registry still lists 1,089 as estimated enrollment; the registry is stale.
+- id: C09
+  category: regulatory
+  transcript_claim: The melanoma vaccine is already approved and available.
+  verdict: unsupported
+  confidence: high
+  sources:
+  - merck_phase3_details
+  - fda_mflusiva
+  evidence: Companies are engaging regulators; the only Moderna mRNA vaccine approved
+    is MFLUSIVA for influenza.
+  notes: No FDA approval for intismeran in melanoma was found.
+- id: C10
+  category: clinical
+  transcript_claim: The vaccine has been shown to work across cancers.
+  verdict: unsupported
+  confidence: high
+  sources:
+  - merck_phase3_details
+  - smc_reaction
+  evidence: The pivotal evidence is in resected stage IIB-IV melanoma; other tumors
+    are still under study.
+  notes: One positive melanoma trial does not establish pan-cancer efficacy.
+- id: C11
+  category: market
+  transcript_claim: The October data leak showed negative results.
+  verdict: unsupported
+  confidence: high
+  sources:
+  - cnbc_leak
+  - merck_phase3_details
+  evidence: CNBC reports a partial leak followed by full positive data; the 42% RFS
+    reduction was clinically meaningful.
+  notes: The leak created a disclosure shock, not a negative efficacy result.
+- id: C12
+  category: market
+  transcript_claim: Moderna fell 25% because the data were bad.
+  verdict: partially_supported
+  confidence: high
+  sources:
+  - cnbc_leak
+  - mrna_yahoo
+  evidence: Intraday decline reached about 25%; close was -17.57%. Full data were
+    positive.
+  notes: The direction of the drop is supported; the causal claim is not. Analysts
+    attributed it to inflated expectations.
+- id: C13
+  category: market
+  transcript_claim: Moderna fell from above $100 to below $10.
+  verdict: unsupported
+  confidence: high
+  sources:
+  - mrna_yahoo
+  evidence: Closing trough after the 2021 peak was $22.36 on 2025-11-20.
+  notes: The stock fell about 95% from its peak but never closed below $10.
+- id: C14
+  category: market
+  transcript_claim: Moderna lost two-thirds of its value in 2023.
+  verdict: unsupported
+  confidence: high
+  sources:
+  - mrna_yahoo
+  evidence: 2023 total return was -44.63%.
+  notes: The two-thirds-scale decline belongs to 2024 (-58.19%), not 2023.
+- id: C15
+  category: financial
+  transcript_claim: Moderna's sales collapsed to $3 billion in 2023.
+  verdict: partially_supported
+  confidence: high
+  sources:
+  - sec_10k_2025
+  evidence: 2023 total revenue was $6.848B; 2024 total revenue was $3.236B.
+  notes: The $3B-scale collapse occurred in 2024, one year later.
+- id: C16
+  category: valuation
+  transcript_claim: Moderna's market capitalization exceeded $200 billion.
+  verdict: partially_supported
+  confidence: medium
+  sources:
+  - mrna_yahoo
+  - sec_facts
+  evidence: Peak intraday $497.42 x 403.6M shares ≈ $200.8B; peak close $484.47 x
+    403.6M ≈ $195.6B.
+  notes: A >$200B valuation is reproducible only on an intraday peak using contemporaneous
+    shares; the closing peak was below $200B.
+- id: C17
+  category: financial
+  transcript_claim: Moderna made about $18 billion in 2021 and $36 billion across
+    its first two commercial years.
+  verdict: supported
+  confidence: high
+  sources:
+  - sec_2022_product_sales
+  evidence: 2021 total revenue $18.471B; 2021-2022 total revenue $37.734B; product
+    sales $36.110B.
+  notes: The $36B figure is product sales; total revenue was $37.7B.
+- id: C18
+  category: corporate
+  transcript_claim: Moderna has about 4,500 employees.
+  verdict: partially_supported
+  confidence: high
+  sources:
+  - sec_10k_2025
+  evidence: 10-K reports approximately 4,700 full-time employees as of 2025-12-31.
+  notes: Order of magnitude is right; the exact figure is outdated by roughly 200.
+- id: C19
+  category: science
+  transcript_claim: Moderna designed its COVID vaccine and dosed the first human within
+    63 days.
+  verdict: supported
+  confidence: high
+  sources:
+  - moderna_2020_63days
+  - nih_63days
+  evidence: 'Company timeline: 63 days from sequence selection to first Phase 1 dose;
+    NIH says 65 days from sequence release.'
+  notes: Both are defensible depending on whether the clock starts at sequence release
+    or selection.
+- id: C20
+  category: policy
+  transcript_claim: HHS canceled 22 mRNA projects worth $500 million.
+  verdict: supported
+  confidence: high
+  sources:
+  - hhs_2025
+  evidence: HHS says the wind-down affects 22 projects worth nearly $500 million.
+  notes: The precise wording is 'nearly $500 million'; separate Moderna bird-flu cancellation
+    is part of the same wind-down.
+- id: C21
+  category: policy
+  transcript_claim: HHS concluded that mRNA vaccines fail to protect against respiratory
+    infections.
+  verdict: supported
+  confidence: high
+  sources:
+  - hhs_2025
+  evidence: 'HHS Secretary quote: ''the data show these vaccines fail to protect effectively
+    against upper respiratory infections like COVID and flu.'''
+  notes: This grades the existence of the claim, not its scientific correctness; the
+    statement is contested by clinical evidence.
+- id: C22
+  category: regulatory
+  transcript_claim: The FDA approved Moderna's mRNA flu vaccine.
+  verdict: supported
+  confidence: high
+  sources:
+  - fda_mflusiva
+  - fda_review
+  evidence: MFLUSIVA approved August 5, 2026 for adults 50 and older.
+  notes: Traditional approval 50-64; accelerated approval 65+ based on immunogenicity.
+- id: C23
+  category: clinical
+  transcript_claim: Moderna's flu vaccine is 27% stronger than the standard flu vaccine.
+  verdict: partially_supported
+  confidence: high
+  sources:
+  - fda_review
+  evidence: Relative vaccine efficacy 26.6% (95% CI 16.7-35.4) vs standard-dose comparator;
+    27.4% in adults 65+.
+  notes: Relative, not absolute, efficacy; the comparator was a standard-dose vaccine,
+    not no vaccine.
+- id: C24
+  category: science
+  transcript_claim: The flu approval proves the cancer vaccine works.
+  verdict: unsupported
+  confidence: high
+  sources:
+  - fda_review
+  - merck_phase3_details
+  evidence: MFLUSIVA and intismeran are different products with different endpoints
+    and mechanisms of action.
+  notes: Platform-level inference is not product-level evidence.
+- id: C25
+  category: corporate
+  transcript_claim: Merck paid $200 million in 2016 and $250 million in 2022 for the
+    mRNA cancer vaccine partnership.
+  verdict: supported
+  confidence: high
+  sources:
+  - merck_2016
+  - merck_2022_option
+  evidence: 2016 upfront $200M; 2022 option exercise $250M; costs and profits shared
+    equally.
+  notes: The 2022 payment was an option exercise, not a new upfront partnership.
+- id: C26
+  category: financial
+  transcript_claim: Keytruda is about one-third of Merck's revenue.
+  verdict: supported
+  confidence: high
+  sources:
+  - merck_2022_q4
+  evidence: 2022 Keytruda sales $20.937B of $59.283B total, or 35.3%.
+  notes: This is a 2022 snapshot; the share is higher in later years.
+- id: C27
+  category: corporate
+  transcript_claim: Keytruda's patent expires in 2028.
+  verdict: partially_supported
+  confidence: high
+  sources:
+  - merck_10k_2025
+  evidence: '10-K: compound patent expires December 2028; two additional patents expire
+    May and November 2029.'
+  notes: Merck plans conservatively for 2028 loss of exclusivity.
+- id: C28
+  category: corporate
+  transcript_claim: Merck owns the cancer vaccine.
+  verdict: partially_supported
+  confidence: high
+  sources:
+  - merck_2022_option
+  evidence: Merck exercised an option to jointly develop and commercialize; costs
+    and profits are shared 50/50.
+  notes: Joint ownership/economic partnership, not sole ownership.
+- id: C29
+  category: manufacturing
+  transcript_claim: Each personalized vaccine takes about six weeks to manufacture.
+  verdict: supported
+  confidence: medium
+  sources:
+  - cnbc_leak
+  evidence: CNBC reports the personalized manufacturing process can take six weeks.
+  notes: Company says the timeline may shorten; this is a current-process estimate.
+- id: C30
+  category: market
+  transcript_claim: Moderna's stock rose roughly fivefold in 2026.
+  verdict: supported
+  confidence: high
+  sources:
+  - mrna_yahoo
+  evidence: 2025 close $29.49 to 2026-10-22 close $202.63, +587.1%.
+  notes: As of 2026-10-23 the YTD return was +578.5%.
+- id: C31
+  category: market
+  transcript_claim: Short sellers lost $5.5 billion on Moderna's August surge.
+  verdict: partially_supported
+  confidence: medium
+  sources:
+  - bloomberg_short
+  evidence: Reported by Bloomberg/S3 as a $5.5B paper loss; the underlying short-interest
+    data are proprietary.
+  notes: The number is widely reported but not independently reproducible from public
+    data.
+- id: C32
+  category: valuation
+  transcript_claim: Moderna was worth about $25 billion before the Phase 3 topline.
+  verdict: supported
+  confidence: high
+  sources:
+  - mrna_yahoo
+  - sec_facts
+  evidence: 62.96 close times 399,235,889 shares equals $25.14B.
+  notes: Close-to-close basis on 2026-08-18.
+- id: C33
+  category: market
+  transcript_claim: Moderna added about $44 billion in market value on the topline
+    day.
+  verdict: supported
+  confidence: high
+  sources:
+  - mrna_yahoo
+  - sec_facts
+  evidence: Close-to-close change from $25.14B to $69.62B, or +$44.48B.
+  notes: Reuters cited about $30B intraday; the difference is timing.
+- id: C34
+  category: clinical
+  transcript_claim: The vaccine prevents melanoma.
+  verdict: partially_supported
+  confidence: high
+  sources:
+  - merck_phase3_details
+  - smc_reaction
+  evidence: It is an adjuvant treatment after complete resection of stage IIB-IV melanoma;
+    it reduces recurrence and distant metastasis.
+  notes: Not a primary preventive vaccine for healthy people.
+- id: C35
+  category: clinical
+  transcript_claim: The absolute benefit is about 12 percentage points at two years.
+  verdict: supported
+  confidence: high
+  sources:
+  - merck_phase3_details
+  - smc_reaction
+  evidence: 82.2% minus 70.0% equals 12.2 percentage points.
+  notes: Corresponds to roughly 8.2 patients treated per additional recurrence-free
+    patient.
+- id: C36
+  category: publication
+  transcript_claim: The Phase 3 results are peer-reviewed and published.
+  verdict: partially_supported
+  confidence: high
+  sources:
+  - merck_phase3_details
+  evidence: Accepted for publication in the New England Journal of Medicine; presented
+    at ESMO 2026 as LBA1.
+  notes: Accepted is not the same as published; no DOI was found as of 2026-10-24.
+- id: C37
+  category: regulatory
+  transcript_claim: The FDA approved Moderna's melanoma cancer vaccine.
+  verdict: unsupported
+  confidence: high
+  sources:
+  - merck_phase3_details
+  - fda_mflusiva
+  evidence: No melanoma approval was found; companies are engaging regulators after
+    Phase 3.
+  notes: Do not confuse the 2026 influenza approval with an oncology approval.
+- id: C38
+  category: market
+  transcript_claim: The October drop was a one-day 25% collapse.
+  verdict: partially_supported
+  confidence: high
+  sources:
+  - mrna_yahoo
+  - cnbc_leak
+  evidence: Intraday high-to-low was -25.06%; close-to-close was -17.57%.
+  notes: The 25% figure is an intraday range, not the closing return.
+- id: C39
+  category: market
+  transcript_claim: The 2023 crash was the whole de-rating.
+  verdict: unsupported
+  confidence: high
+  sources:
+  - mrna_yahoo
+  evidence: 'Annual returns: 2023 -44.63%, 2024 -58.19%, 2025 -29.08%; trough in November
+    2025.'
+  notes: The decline was multi-year, not a single 2023 event.
+- id: C40
+  category: clinical
+  transcript_claim: The vaccine's benefit is larger than the trial's overall hazard
+    ratio suggests.
+  verdict: supported
+  confidence: high
+  sources:
+  - merck_phase3_details
+  evidence: Overall RFS HR 0.58; post-six-month piecewise HR 0.42.
+  notes: The overall average dilutes the delayed treatment effect.
+- id: C41
+  category: market
+  transcript_claim: Merck also fell sharply when the positive data were released.
+  verdict: partially_supported
+  confidence: high
+  sources:
+  - nasdaq_mrk
+  - mrna_yahoo
+  evidence: MRK rose 12.6% on 2026-08-19 and fell 1.76% on 2026-10-22.
+  notes: Two different events; the large positive move was on the topline.
+- id: C42
+  category: market
+  transcript_claim: The stock reaction is evidence that the data were negative.
+  verdict: unsupported
+  confidence: high
+  sources:
+  - cnbc_leak
+  - merck_phase3_details
+  evidence: The data were positive; the selloff followed a partial leak and elevated
+    expectations.
+  notes: Price reaction is not an efficacy endpoint.

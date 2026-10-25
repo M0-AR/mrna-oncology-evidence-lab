@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this repository in research, teaching, or diligence, please cite it using this metadata."
+title: "Delayed Divergence: A Reproducible Evidence Audit of the Moderna-Merck mRNA Melanoma Vaccine and Its Market Reaction"
+type: software
+authors:
+  - name: "Delayed Divergence contributors"
+version: "1.0.0"
+date-released: "2026-10-25"
+license: MIT
+abstract: >-
+  A clean-room, reproducible evidence audit of the Moderna-Merck individualized
+  mRNA melanoma vaccine (intismeran autogene, V940/mRNA-4157). The repository
+  grades 42 claims against 29 sources, reconstructs the Phase 3 clinical result,
+  estimates market-model abnormal returns with placebo inference, and provides
+  an offline Python pipeline, committed source snapshots, SHA-256 manifests,
+  tests, and an interactive static preview.
+keywords:
+  - evidence audit
+  - reproducible research
+  - mRNA cancer vaccine
+  - intismeran autogene
+  - melanoma
+  - event study
+  - claim verification
+  - open source
