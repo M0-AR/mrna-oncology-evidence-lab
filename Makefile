@@ -7,6 +7,7 @@ pipeline:
 
 site:
 	python scripts/build_site_data.py
+	python scripts/build_site_mirror.py
 
 test:
 	pytest

@@ -16,6 +16,9 @@ def test_site_files_exist():
         "assets/preview-hero.png",
         "assets/social-preview.png",
         "assets/demo.gif",
+        "docs/index.html",
+        "docs/preview.html",
+        "docs/.nojekyll",
     ]
     for relative in required:
         assert (ROOT / relative).is_file(), relative
@@ -36,16 +39,22 @@ def test_site_data_bundle():
     assert all(claim["sourceCount"] >= 1 for claim in payload["claims"])
 
 
-def test_preview_is_self_contained():
-    text = (ROOT / "preview.html").read_text(encoding="utf-8")
-    assert '<meta property="og:image" content="assets/social-preview.png">' in text
-    assert '<meta name="twitter:card" content="summary_large_image">' in text
+def assert_local_refs(page: Path, base: Path) -> None:
+    text = page.read_text(encoding="utf-8")
     assert '<script src="http' not in text
     assert '<link rel="stylesheet" href="http' not in text
     for target in re.findall(r'(?:src|href)="([^"#]+)"', text):
         if target.startswith(("http://", "https://", "data:", "mailto:")):
             continue
-        assert (ROOT / target.split("?", 1)[0]).is_file(), target
+        assert (base / target.split("?", 1)[0]).is_file(), target
+
+
+def test_preview_is_self_contained():
+    text = (ROOT / "preview.html").read_text(encoding="utf-8")
+    assert '<meta property="og:image" content="assets/social-preview.png">' in text
+    assert '<meta name="twitter:card" content="summary_large_image">' in text
+    assert_local_refs(ROOT / "preview.html", ROOT)
+    assert_local_refs(ROOT / "docs" / "preview.html", ROOT / "docs")
 
 
 def test_index_redirects_to_preview():
@@ -60,6 +69,9 @@ def test_readme_beginner_guide_and_voice():
     assert "[🌱 Beginner guide](#-beginner-guide--read-this-and-you-are-a-professional)" in text
     assert "You will know more than most interview candidates." in text
     assert "Let's work this out in a step-by-step way to be sure we have the right answer." in text
+    assert "https://m0-ar.github.io/mrna-oncology-evidence-lab/" in text
+    assert "https://m0-ar.github.io/mrna-oncology-evidence-lab/preview.html" in text
+    assert "https://m0-ar.github.io/mrna-oncology-evidence-lab/docs/preview.html" in text
     lower = text.lower()
     assert "donkey" not in lower
     assert "playwright" not in lower

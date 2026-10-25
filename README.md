@@ -6,6 +6,7 @@
 [![Sources](https://img.shields.io/badge/sources-29-0d7a64)](config/sources.yaml)
 [![Tests](https://img.shields.io/badge/tests-26%20passing-0d7a64)](tests)
 [![License](https://img.shields.io/badge/license-MIT-bf5a38)](LICENSE)
+[![Live site](https://img.shields.io/badge/live-preview-0d7a64)](https://m0-ar.github.io/mrna-oncology-evidence-lab/)
 
 **One positive Phase 3 trial. Forty-two claims. A $44 billion rally. A 17.6% reversal. A story almost everyone got partly right.**
 
@@ -15,7 +16,9 @@ It is built for people who need to know **what is supported, what is only partly
 
 ![Delayed Divergence interactive preview](assets/demo.gif)
 
-**[Open the interactive preview](preview.html)** · **[Read the 60-second brief](#the-60-second-brief)** · **[Take the quiz](#-beginner-guide--read-this-and-you-are-a-professional)** · **[Rebuild every number](#reproducibility)**
+**Live:** [home](https://m0-ar.github.io/mrna-oncology-evidence-lab/) · [preview.html](https://m0-ar.github.io/mrna-oncology-evidence-lab/preview.html) · [docs/preview.html](https://m0-ar.github.io/mrna-oncology-evidence-lab/docs/preview.html)
+
+**Start here:** **[60-second brief](#the-60-second-brief)** · **[Beginner guide + quiz](#-beginner-guide--read-this-and-you-are-a-professional)** · **[Rebuild every number](#reproducibility)**
 
 ---
 
@@ -90,7 +93,7 @@ The Phase 3 trial met its recurrence and distant-metastasis endpoints. The avera
 
 ### Step 3 — Open the claim explorer
 
-Open [`preview.html`](preview.html), scroll to **“42 claims. Four verdicts.”**, and filter by **Clinical**, **Market**, **Regulatory**, or **Financial**. Search for any phrase. Every card shows the claim, the verdict, the evidence, the confidence, and the number of sources.
+Open the [live preview](https://m0-ar.github.io/mrna-oncology-evidence-lab/preview.html), scroll to **“42 claims. Four verdicts.”**, and filter by **Clinical**, **Market**, **Regulatory**, or **Financial**. Search for any phrase. Every card shows the claim, the verdict, the evidence, the confidence, and the number of sources.
 
 ### Step 4 — Take the eight-question quiz
 
@@ -487,13 +490,14 @@ data/processed/          generated price and return panels
 evidence/snapshots/      committed primary-source snapshots
 evidence/manifests/      SHA-256 manifests and run summary
 src/mrna_evidence/       ingestion, event study, clinical, financial, claim audit
-scripts/                 site-data builder and verifier
+scripts/                 site-data/mirror builders and verifier
 tests/                   unit, integration, and site checks
 results/tables/          generated tables
 results/figures/         generated figures
 paper/                   manuscript, figures, and machine-readable summary
 preview.html             interactive static site
 index.html               redirect to preview.html
+docs/                    /docs/preview.html mirror
 .nojekyll                GitHub Pages bypass file
 ```
 
@@ -511,16 +515,31 @@ The preview is a fully static page. It needs no build step at runtime:
 - `assets/social-preview.png` — social sharing image;
 - `assets/demo.gif` — animated tour;
 - `index.html` — redirect to `preview.html`;
+- `docs/preview.html` — mirror served at `/docs/preview.html`;
+- `docs/index.html` — redirect for the `/docs/` path;
+- `docs/.nojekyll` — keeps the mirror static;
 - `.nojekyll` — tells GitHub Pages not to run Jekyll.
 
-### Enable GitHub Pages
+### Live site
+
+The site is live at **https://m0-ar.github.io/mrna-oncology-evidence-lab/** and deploys from **`main` / `(root)`**.
+
+| URL | What it serves |
+|---|---|
+| `/` | redirects to the interactive preview |
+| `/preview.html` | primary interactive preview |
+| `/docs/preview.html` | mirror for the `docs/` path |
+
+`make site` regenerates `assets/site-data.js` and the `docs/` mirror from the canonical `preview.html`.
+
+To recreate the same setup on a fork:
 
 1. Push the repository to GitHub.
 2. Open **Settings → Pages**.
 3. Under **Build and deployment**, choose **Deploy from a branch**.
 4. Select **main** and **/ (root)**.
 5. Save. The site will be served at `https://<owner>.github.io/<repo>/`.
-6. `index.html` redirects to `preview.html`.
+6. `index.html` redirects to `preview.html`; `docs/preview.html` remains available as a mirror.
 
 GitHub Pages sites are public even when the repository is private. The page has no external JS, CSS, or font dependencies, so it works from the repository root without a build pipeline.
 
@@ -644,7 +663,7 @@ The code and original text are MIT-licensed. Third-party source snapshots remain
 No. It is a research and education artifact. It is not a substitute for medical advice, a clinical decision, a security recommendation, or independent diligence.
 
 **How do I publish the site?**
-Push the repository, open Settings → Pages, choose “Deploy from a branch,” select `main` and `/ (root)`, and save. `index.html` redirects to `preview.html`; `.nojekyll` keeps the static assets intact.
+Push the repository, open Settings → Pages, choose “Deploy from a branch,” select `main` and `/ (root)`, and save. The live site is `https://m0-ar.github.io/mrna-oncology-evidence-lab/`; `index.html` redirects to `preview.html`, and `docs/preview.html` is the mirror.
 
 **How current is the audit?**
 The Phase 3 readout is current through 2026-10-24. The repository is designed to be updated when a published version, DOI, or new survival data appear.

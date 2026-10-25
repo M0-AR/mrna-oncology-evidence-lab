@@ -14,6 +14,7 @@ COPY evidence ./evidence
 COPY tests ./tests
 COPY scripts ./scripts
 COPY preview.html index.html .nojekyll ./
+COPY docs ./docs
 COPY assets ./assets
 
 RUN apt-get update \
